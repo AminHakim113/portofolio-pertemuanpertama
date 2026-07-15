@@ -7,7 +7,7 @@ const projects = [
     link: "#",
   },
   {
-    title: "Project Kedua",
+    title: "Project Pertama",
     desc: "Deskripsi singkat project kami di sini.",
     link: "#",
   },
@@ -18,7 +18,7 @@ export default function PortoPage() {
     <main className="min-h-screen bg-gray-950 text-white px-4 py-24">
       <div className="max-w-3xl mx-auto">
         <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">
-          ← Kembali ke Beranda
+          ← Kembali ke Halaman Utama
         </Link>
 
         <h1 className="text-4xl font-bold mt-6 mb-2">Portofolio</h1>

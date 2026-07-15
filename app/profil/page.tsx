@@ -5,7 +5,7 @@ export default function ProfilPage() {
     <main className="min-h-screen bg-gray-950 text-white px-4 py-24">
       <div className="max-w-2xl mx-auto">
         <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">
-          ← Kembali ke Beranda
+          ← Kembali ke Halaman Utama
         </Link>
 
         <h1 className="text-4xl font-bold mt-6 mb-2">Profil Saya</h1>
@@ -13,13 +13,14 @@ export default function ProfilPage() {
 
         <div className="space-y-6 text-gray-300 leading-relaxed">
           <p>
-            Halo! Nama Kami <span className="text-white font-medium">Dika Chiko</span>.
+            Halo! Nama Kami <span className="text-white font-medium">Amin</span>.
             Saya siswa kelas 12 yang sedang belajar pengembangan web menggunakan
             Next.js dan React.
           </p>
           <p>
-            Kami tertarik dengan dunia programming karena suka membuat hal-hal
-            yang bisa dilihat dan digunakan orang lain secara langsung.
+            Ketertarikan saya di dunia pemrograman lahir dari hasrat 
+            untuk menciptakan produk digital yang fungsional, visual, 
+            dan memberikan dampak langsung bagi penggunanya.
           </p>
 
           <div>
@@ -39,8 +40,8 @@ export default function ProfilPage() {
           <div>
             <h2 className="text-xl font-semibold text-white mb-3">Kontak</h2>
             <ul className="space-y-1 text-gray-400">
-              <li>Email: mahardikaprayudi@gmail.com</li>
-              <li>Instagram: @mahardikaprayudi</li>
+              <li>Email: ka37minnn@gmail.com</li>
+              <li>Instagram: @kamin</li>
             </ul>
           </div>
         </div>

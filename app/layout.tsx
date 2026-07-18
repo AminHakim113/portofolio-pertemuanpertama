@@ -1,17 +1,19 @@
-import Navbar from "./components/Navbar";
+import type { Metadata } from "next";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Kamin — Portofolio",
+  description: "Portofolio personal Kamin",
+};
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="id">
-      <body className="bg-gray-950 text-white">
-        <Navbar />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

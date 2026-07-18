@@ -1,38 +1,62 @@
-import Link from "next/link";
-
-const projects = [
-  {
-    title: "Website Portofolio",
-    desc: "Website portofolio dibuat dengan Next.js dan Tailwind CSS.",
-    link: "#",
-  },
-  {
-    title: "Project Pertama",
-    desc: "Deskripsi singkat project kami di sini.",
-    link: "#",
-  },
-];
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import ProjectCard from "../components/ProjectCard";
 
 export default function PortoPage() {
   return (
-    <main className="min-h-screen bg-gray-950 text-white px-4 py-24">
-      <div className="max-w-3xl mx-auto">
-        <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">
-          ← Kembali ke Halaman Utama
-        </Link>
+    <main>
+      <Navbar />
 
-        <h1 className="text-4xl font-bold mt-6 mb-2">Portofolio</h1>
-        <p className="text-gray-400 mb-10">Kumpulan project yang pernah kami buat.</p>
+      <section className="page-header">
+        <p className="eyebrow">PORTOFOLIO</p>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
-            <a key={project.title} href={project.link} className="block bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition">
-              <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-400 text-sm">{project.desc}</p>
-            </a>
-          ))}
-        </div>
-      </div>
+        <h1>
+          Beberapa hal yang
+          <br />
+          <span>pernah saya buat.</span>
+        </h1>
+
+        <p>
+          Kumpulan proyek, ide, dan eksplorasi yang saya kerjakan dengan
+          pendekatan kreatif dan penuh rasa ingin tahu.
+        </p>
+      </section>
+
+      <section className="portfolio-list">
+        <ProjectCard
+          number="01"
+          title="Dravest"
+          category="Digital Experience"
+          description="Sebuah proyek yang berfokus pada pengalaman digital yang modern, terstruktur, dan mudah digunakan."
+          href="/porto"
+        />
+
+        <ProjectCard
+          number="02"
+          title="Historia"
+          category="Creative Project"
+          description="Eksplorasi ide dan cerita yang dikembangkan menjadi sebuah pengalaman visual yang menarik."
+          href="/porto"
+        />
+
+        <ProjectCard
+          number="03"
+          title="Cerita"
+          category="Personal Project"
+          description="Sebuah ruang untuk mengembangkan gagasan, cerita, dan konsep dalam bentuk digital."
+          href="/porto"
+        />
+      </section>
+
+      <section className="portfolio-quote">
+        <p>
+          “Setiap proyek memiliki cerita.
+          <br />
+          Tugas saya adalah membantu cerita itu menemukan bentuknya.”
+        </p>
+      </section>
+
+      <Footer />
     </main>
   );
 }

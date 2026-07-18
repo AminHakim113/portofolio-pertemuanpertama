@@ -1,51 +1,100 @@
+import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import SkillCard from "../components/SkillCard";
 
 export default function ProfilPage() {
   return (
-    <main className="min-h-screen bg-gray-950 text-white px-4 py-24">
-      <div className="max-w-2xl mx-auto">
-        <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">
-          ← Kembali ke Halaman Utama
-        </Link>
+    <main>
+      <Navbar />
 
-        <h1 className="text-4xl font-bold mt-6 mb-2">Profil Saya</h1>
-        <p className="text-gray-400 mb-8">Siswa Kelas 12 - Web Developer Pemula</p>
+      <section className="page-header">
+        <p className="eyebrow">PROFIL</p>
 
-        <div className="space-y-6 text-gray-300 leading-relaxed">
-          <p>
-            Halo! Nama Kami <span className="text-white font-medium">Amin</span>.
-            Saya siswa kelas 12 yang sedang belajar pengembangan web menggunakan
-            Next.js dan React.
-          </p>
-          <p>
-            Ketertarikan saya di dunia pemrograman lahir dari hasrat 
-            untuk menciptakan produk digital yang fungsional, visual, 
-            dan memberikan dampak langsung bagi penggunanya.
-          </p>
+        <h1>
+          Mengenal lebih dekat
+          <br />
+          <span>Kamin.</span>
+        </h1>
 
-          <div>
-            <h2 className="text-xl font-semibold text-white mb-3">Skill</h2>
-            <div className="flex flex-wrap gap-2">
-              {["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"].map((skill) => (
-                <span
-                  key={skill}
-                  className="bg-gray-800 text-sm px-3 py-1 rounded-full border border-gray-700"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
+        <p>
+          Seorang individu yang senang mengeksplorasi teknologi, kreativitas,
+          dan berbagai cara untuk mengubah ide menjadi sesuatu yang nyata.
+        </p>
+      </section>
 
-          <div>
-            <h2 className="text-xl font-semibold text-white mb-3">Kontak</h2>
-            <ul className="space-y-1 text-gray-400">
-              <li>Email: ka37minnn@gmail.com</li>
-              <li>Instagram: @kamin</li>
-            </ul>
-          </div>
+      <section className="profile-detail">
+        <div className="profile-large-image">
+          <Image
+            src="/profile/kamin.jpg"
+            alt="Foto profil Kamin"
+            fill
+            className="profile-image"
+          />
         </div>
-      </div>
+
+        <div className="profile-text">
+          <p className="eyebrow">TENTANG SAYA</p>
+
+          <h2>
+            Bukan hanya tentang
+            <br />
+            <span>apa yang dibuat.</span>
+          </h2>
+
+          <p>
+            Saya percaya bahwa sebuah karya yang baik bukan hanya terlihat
+            menarik, tetapi juga memiliki tujuan. Karena itu, saya selalu
+            berusaha memahami ide, kebutuhan, dan cerita di balik setiap
+            proyek.
+          </p>
+
+          <p>
+            Dengan rasa ingin tahu dan semangat untuk terus belajar, saya
+            senang mengeksplorasi dunia digital serta menciptakan sesuatu yang
+            sederhana namun memiliki makna.
+          </p>
+
+          <Link href="/kontak" className="text-link">
+            Mari terhubung <span>→</span>
+          </Link>
+        </div>
+      </section>
+
+      <section className="skills-section">
+        <div className="section-heading">
+          <p className="eyebrow">YANG SAYA LAKUKAN</p>
+
+          <h2>
+            Ide menjadi
+            <br />
+            <span>sebuah pengalaman.</span>
+          </h2>
+        </div>
+
+        <div className="skills-grid">
+          <SkillCard
+            number="01"
+            title="Pengembangan"
+            description="Membangun pengalaman digital dengan pendekatan yang terstruktur dan fungsional."
+          />
+
+          <SkillCard
+            number="02"
+            title="Kreativitas"
+            description="Mengeksplorasi ide dan konsep untuk menghasilkan karya yang berbeda."
+          />
+
+          <SkillCard
+            number="03"
+            title="Pemecahan Masalah"
+            description="Mencari solusi yang sederhana, efektif, dan sesuai dengan kebutuhan."
+          />
+        </div>
+      </section>
+
+      <Footer />
     </main>
   );
 }

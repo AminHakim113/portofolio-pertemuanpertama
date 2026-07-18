@@ -1,14 +1,39 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const menu = [
+    { name: "Beranda", href: "/" },
+    { name: "Profil", href: "/profil" },
+    { name: "Porto", href: "/porto" },
+    { name: "Kontak", href: "/kontak" },
+  ];
+
   return (
-    <nav className="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-gray-950/80 backdrop-blur border-b border-gray-800 z-50">
-      <span className="font-bold text-lg">Amin</span>
-      <div className="flex gap-6 text-sm text-gray-300">
-        <Link href="/profil" className="hover:text-white">Profil</Link>
-        <Link href="/porto" className="hover:text-white">Portofolio</Link>
-        <Link href="/kontak" className="hover:text-white">Kontak</Link>
+    <nav className="navbar">
+      <Link href="/" className="logo">
+        kamin
+      </Link>
+
+      <div className="nav-links">
+        {menu.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={pathname === item.href ? "active" : ""}
+          >
+            {item.name}
+          </Link>
+        ))}
       </div>
+
+      <Link href="/kontak" className="nav-contact">
+        Mari berbicara <span>↗</span>
+      </Link>
     </nav>
   );
 }

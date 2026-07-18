@@ -1,31 +1,67 @@
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function KontakPage() {
-  const namaSekolah = "SMK Telkom Makassar"; 
-
   return (
-    <main className="min-h-screen bg-gray-950 text-white px-4 py-24">
-      <div className="max-w-2xl mx-auto">
-        <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">
-          ← Kembali ke Halaman Utama 
-        </Link>
+    <main>
+      <Navbar />
 
-        <h1 className="text-4xl font-bold mt-6 mb-2">Hubungi Kami</h1>
-        <p className="text-gray-400 mb-8">Ada pertanyaan? Kirim pesan ke saya</p>
+      <section className="contact-page">
+        <div className="contact-heading">
+          <p className="eyebrow">KONTAK</p>
 
-        <div className="space-y-6 text-gray-300 leading-relaxed">
+          <h1>
+            Mari buat sesuatu
+            <br />
+            <span>yang menarik.</span>
+          </h1>
+
           <p>
-            Jika Anda memiliki pertanyaan seputar tugas, proyek, atau ingin
-            berdiskusi lebih lanjut sebagai siswa {namaSekolah}, silakan
-            hubungi saya melalui tombol di bawah ini atau kontak yang
-            tertera di halaman Profil.
+            Punya ide, proyek, atau sekadar ingin berbicara? Saya selalu
+            terbuka untuk mendengar cerita baru.
           </p>
-
-          <button className="bg-red-600 hover:bg-red-500 text-white px-5 py-2 rounded-lg font-medium transition-colors">
-            Kirim Pesan
-          </button>
         </div>
-      </div>
+
+        <div className="contact-list">
+          <a href="mailto:kaminpengensupra@gmail.com" className="contact-item">
+            <div>
+              <span>Email</span>
+              <h3>kaminpengensupra@gmail.com</h3>
+            </div>
+
+            <span className="contact-arrow">↗</span>
+          </a>
+
+          <a href="#" className="contact-item">
+            <div>
+              <span>Instagram</span>
+              <h3>@kamin</h3>
+            </div>
+
+            <span className="contact-arrow">↗</span>
+          </a>
+
+          <a href="#" className="contact-item">
+            <div>
+              <span>LinkedIn</span>
+              <h3>Kamin</h3>
+            </div>
+
+            <span className="contact-arrow">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section className="contact-bottom">
+        <p>Atau kembali menjelajahi karya saya.</p>
+
+        <Link href="/porto" className="text-link">
+          Lihat portofolio <span>→</span>
+        </Link>
+      </section>
+
+      <Footer />
     </main>
   );
 }

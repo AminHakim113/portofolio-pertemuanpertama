@@ -1,62 +1,42 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import ProjectCard from "../components/ProjectCard";
 
 export default function PortoPage() {
   return (
-    <main>
-      <Navbar />
-
+    <main className="page-container">
       <section className="page-header">
         <p className="eyebrow">PORTOFOLIO</p>
 
         <h1>
-          Beberapa hal yang
+          Karya
           <br />
-          <span>pernah saya buat.</span>
+          <span>yang saya buat.</span>
         </h1>
 
         <p>
-          Kumpulan proyek, ide, dan eksplorasi yang saya kerjakan dengan
-          pendekatan kreatif dan penuh rasa ingin tahu.
+          Beberapa proyek yang menjadi bagian dari perjalanan saya dalam
+          belajar dan berkarya.
         </p>
       </section>
 
-      <section className="portfolio-list">
+      <section className="portfolio-grid">
         <ProjectCard
-          number="01"
-          title="Dravest"
-          category="Digital Experience"
-          description="Sebuah proyek yang berfokus pada pengalaman digital yang modern, terstruktur, dan mudah digunakan."
-          href="/porto"
+          nomor="01"
+          judul="Dravest"
+          deskripsi="Proyek digital dengan konsep modern yang menggabungkan kreativitas dan teknologi."
         />
 
         <ProjectCard
-          number="02"
-          title="Historia"
-          category="Creative Project"
-          description="Eksplorasi ide dan cerita yang dikembangkan menjadi sebuah pengalaman visual yang menarik."
-          href="/porto"
+          nomor="02"
+          judul="Historia"
+          deskripsi="Sebuah proyek yang berfokus pada cerita, sejarah, dan penyampaian informasi secara menarik."
         />
 
         <ProjectCard
-          number="03"
-          title="Cerita"
-          category="Personal Project"
-          description="Sebuah ruang untuk mengembangkan gagasan, cerita, dan konsep dalam bentuk digital."
-          href="/porto"
+          nomor="03"
+          judul="Cerita"
+          deskripsi="Ruang untuk menuangkan ide, pengalaman, dan kreativitas ke dalam sebuah karya."
         />
       </section>
-
-      <section className="portfolio-quote">
-        <p>
-          “Setiap proyek memiliki cerita.
-          <br />
-          Tugas saya adalah membantu cerita itu menemukan bentuknya.”
-        </p>
-      </section>
-
-      <Footer />
     </main>
   );
 }

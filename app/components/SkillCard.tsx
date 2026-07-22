@@ -1,19 +1,13 @@
 type SkillCardProps = {
-  number: string;
-  title: string;
-  description: string;
+  judul: string;
 };
 
-export default function SkillCard({
-  number,
-  title,
-  description,
-}: SkillCardProps) {
+export default function SkillCard({ judul }: SkillCardProps) {
   return (
     <div className="skill-card">
-      <span>{number}</span>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3>{judul}</h3>
+
+      <span>→</span>
     </div>
   );
 }

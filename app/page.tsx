@@ -1,14 +1,9 @@
 import Link from "next/link";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import ProfileCard from "./components/ProfileCard";
 import ProjectCard from "./components/ProjectCard";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
-
       <section className="hero">
         <div className="hero-content">
           <p className="eyebrow">PORTOFOLIO PERSONAL</p>
@@ -16,117 +11,89 @@ export default function Home() {
           <h1>
             Halo,
             <br />
-            saya <span>Kamin.</span>
+            Saya Kamin.
           </h1>
 
           <p className="description">
-            Seorang developer dan pemikir kreatif yang membangun pengalaman
+            Seorang pengembang dan pemikir kreatif yang membangun pengalaman
             digital yang bermakna, berguna, dan berkesan.
           </p>
 
           <div className="hero-buttons">
-            <Link href="/porto" className="button-primary">
-              Lihat karya saya <span>↗</span>
+            <Link href="/porto" className="button primary">
+              Lihat Karya
             </Link>
 
-            <Link href="/kontak" className="button-secondary">
-              Mari berbicara <span>↗</span>
+            <Link href="/kontak" className="button secondary">
+              Mari Terhubung
             </Link>
           </div>
         </div>
 
         <div className="hero-image">
-          <div className="hero-image-inner">
-            <img src="/profile/kamin.jpg" alt="Kamin" />
-          </div>
+          <img src="/profile/kamin.jpg" alt="Foto profil Kamin" />
         </div>
       </section>
 
       <section className="about-section">
-        <div className="section-heading">
+        <div className="about-title">
           <p className="eyebrow">TENTANG SAYA</p>
 
           <h2>
-            Mengenal lebih dekat
+            Kenali lebih dekat
             <br />
             <span>orang di balik karya.</span>
           </h2>
         </div>
 
-        <ProfileCard />
-
         <div className="about-description">
           <p>
-            Saya percaya bahwa setiap karya yang baik dimulai dari sebuah ide
-            yang jelas. Saya senang mengubah ide menjadi pengalaman digital
-            yang sederhana, menarik, dan memiliki tujuan.
+            Saya memiliki ketertarikan terhadap teknologi, desain, dan
+            pengembangan digital. Saya senang menciptakan sesuatu yang
+            bermanfaat, menarik, dan mudah digunakan.
           </p>
 
           <Link href="/profil" className="text-link">
-            Lihat profil lengkap <span>→</span>
+            Lihat profil lengkap →
           </Link>
         </div>
       </section>
 
       <section className="projects-preview">
-        <div className="section-top">
-          <div>
-            <p className="eyebrow">KARYA PILIHAN</p>
+        <div className="section-heading">
+          <p className="eyebrow">PROYEK PILIHAN</p>
 
-            <h2>
-              Setiap ide dimulai
-              <br />
-              <span>dari sebuah cerita.</span>
-            </h2>
-          </div>
-
-          <Link href="/porto" className="text-link">
-            Lihat semua karya <span>→</span>
-          </Link>
+          <h2>
+            Setiap ide
+            <br />
+            <span>memiliki cerita.</span>
+          </h2>
         </div>
 
         <div className="project-grid">
           <ProjectCard
-            number="01"
-            title="Dravest"
-            category="Digital Experience"
-            description="Sebuah proyek yang menggabungkan ide, desain, dan pengalaman digital."
-            href="/porto"
+            nomor="01"
+            judul="Dravest"
+            deskripsi="Sebuah proyek digital dengan konsep modern yang menggabungkan kreativitas dan teknologi."
           />
 
           <ProjectCard
-            number="02"
-            title="Historia"
-            category="Creative Project"
-            description="Eksplorasi kreatif yang dibangun melalui cerita dan konsep yang kuat."
-            href="/porto"
+            nomor="02"
+            judul="Historia"
+            deskripsi="Proyek yang mengangkat cerita dan sejarah dalam bentuk pengalaman digital yang menarik."
           />
 
           <ProjectCard
-            number="03"
-            title="Cerita"
-            category="Personal Project"
-            description="Ruang untuk menuangkan ide dan cerita ke dalam bentuk digital."
-            href="/porto"
+            nomor="03"
+            judul="Cerita"
+            deskripsi="Ruang untuk menuangkan ide, pengalaman, dan kreativitas ke dalam sebuah karya."
           />
         </div>
-      </section>
 
-      <section className="home-contact">
-        <p className="eyebrow">PUNYA IDE?</p>
-
-        <h2>
-          Mari buat sesuatu
-          <br />
-          <span>yang berarti bersama.</span>
-        </h2>
-
-        <Link href="/kontak" className="button-primary">
-          Hubungi saya <span>↗</span>
+        <Link href="/porto" className="text-link">
+          Lihat semua proyek →
         </Link>
       </section>
-
-      <Footer />
     </main>
   );
 }

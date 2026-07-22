@@ -1,100 +1,61 @@
-import Image from "next/image";
 import Link from "next/link";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import ProfileCard from "../components/ProfileCard";
 import SkillCard from "../components/SkillCard";
 
 export default function ProfilPage() {
   return (
-    <main>
-      <Navbar />
-
+    <main className="page-container">
       <section className="page-header">
         <p className="eyebrow">PROFIL</p>
 
         <h1>
-          Mengenal lebih dekat
+          Tentang
           <br />
-          <span>Kamin.</span>
+          <span>saya.</span>
         </h1>
 
         <p>
-          Seorang individu yang senang mengeksplorasi teknologi, kreativitas,
-          dan berbagai cara untuk mengubah ide menjadi sesuatu yang nyata.
+          Mengenal lebih jauh tentang minat, kemampuan, dan perjalanan saya
+          dalam dunia digital.
         </p>
       </section>
 
-      <section className="profile-detail">
-        <div className="profile-large-image">
-          <Image
-            src="/profile/kamin.jpg"
-            alt="Foto profil Kamin"
-            fill
-            className="profile-image"
-          />
-        </div>
+      <section className="profile-layout">
+        <ProfileCard judul="Kamin" />
 
         <div className="profile-text">
-          <p className="eyebrow">TENTANG SAYA</p>
-
-          <h2>
-            Bukan hanya tentang
-            <br />
-            <span>apa yang dibuat.</span>
-          </h2>
-
           <p>
-            Saya percaya bahwa sebuah karya yang baik bukan hanya terlihat
-            menarik, tetapi juga memiliki tujuan. Karena itu, saya selalu
-            berusaha memahami ide, kebutuhan, dan cerita di balik setiap
-            proyek.
+            Saya adalah seseorang yang memiliki ketertarikan terhadap
+            teknologi, desain, dan pengembangan digital.
           </p>
 
           <p>
-            Dengan rasa ingin tahu dan semangat untuk terus belajar, saya
-            senang mengeksplorasi dunia digital serta menciptakan sesuatu yang
-            sederhana namun memiliki makna.
+            Saya percaya bahwa sebuah karya yang baik tidak hanya harus terlihat
+            menarik, tetapi juga memiliki tujuan dan memberikan pengalaman yang
+            baik bagi penggunanya.
           </p>
 
-          <Link href="/kontak" className="text-link">
-            Mari terhubung <span>→</span>
-          </Link>
+          <p>
+            Melalui berbagai proyek, saya terus belajar dan mengembangkan
+            kemampuan untuk menciptakan solusi digital yang kreatif dan
+            bermanfaat.
+          </p>
         </div>
       </section>
 
       <section className="skills-section">
-        <div className="section-heading">
-          <p className="eyebrow">YANG SAYA LAKUKAN</p>
-
-          <h2>
-            Ide menjadi
-            <br />
-            <span>sebuah pengalaman.</span>
-          </h2>
-        </div>
+        <p className="eyebrow">KEMAMPUAN</p>
 
         <div className="skills-grid">
-          <SkillCard
-            number="01"
-            title="Pengembangan"
-            description="Membangun pengalaman digital dengan pendekatan yang terstruktur dan fungsional."
-          />
-
-          <SkillCard
-            number="02"
-            title="Kreativitas"
-            description="Mengeksplorasi ide dan konsep untuk menghasilkan karya yang berbeda."
-          />
-
-          <SkillCard
-            number="03"
-            title="Pemecahan Masalah"
-            description="Mencari solusi yang sederhana, efektif, dan sesuai dengan kebutuhan."
-          />
+          <SkillCard judul="Pengembangan Web" />
+          <SkillCard judul="Desain Kreatif" />
+          <SkillCard judul="Pemecahan Masalah" />
         </div>
       </section>
 
-      <Footer />
+      <Link href="/kontak" className="text-link">
+        Hubungi saya →
+      </Link>
     </main>
   );
 }

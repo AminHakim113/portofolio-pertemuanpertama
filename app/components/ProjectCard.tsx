@@ -1,31 +1,27 @@
-import Link from "next/link";
-
 type ProjectCardProps = {
-  number: string;
-  title: string;
-  description: string;
-  category: string;
-  href: string;
+  nomor: string;
+  judul: string;
+  deskripsi: string;
 };
 
 export default function ProjectCard({
-  number,
-  title,
-  description,
-  category,
-  href,
+  nomor,
+  judul,
+  deskripsi,
 }: ProjectCardProps) {
   return (
-    <Link href={href} className="project-card">
-      <div className="project-number">{number}</div>
+    <div className="project-card">
+      <div className="project-top">
+        <span>{nomor}</span>
 
-      <div className="project-content">
-        <span>{category}</span>
-        <h3>{title}</h3>
-        <p>{description}</p>
+        <span className="project-arrow">↗</span>
       </div>
 
-      <div className="project-arrow">↗</div>
-    </Link>
+      <div>
+        <h3>{judul}</h3>
+
+        <p>{deskripsi}</p>
+      </div>
+    </div>
   );
 }

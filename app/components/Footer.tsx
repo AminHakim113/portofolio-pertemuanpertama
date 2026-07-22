@@ -4,18 +4,20 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div>
-        <h3>kamin</h3>
-        <p>Portofolio personal dan kumpulan karya.</p>
+        <Link href="/" className="footer-logo">
+          kamin
+        </Link>
+
+        <p>Portofolio personal.</p>
       </div>
 
       <div className="footer-links">
-        <Link href="/">Beranda</Link>
         <Link href="/profil">Profil</Link>
-        <Link href="/porto">Porto</Link>
+        <Link href="/porto">Portofolio</Link>
         <Link href="/kontak">Kontak</Link>
       </div>
 
-      <p className="copyright">© 2026 Kamin. Seluruh hak dilindungi.</p>
+      <p>© 2026 Kamin. Semua hak dilindungi.</p>
     </footer>
   );
 }

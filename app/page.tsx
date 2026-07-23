@@ -61,7 +61,7 @@ export default function Home() {
 
       <section className="projects-preview">
         <div className="section-heading">
-          <p className="eyebrow">PROYEK PILIHAN</p>
+          
 
           <h2>
             Setiap ide
@@ -69,30 +69,6 @@ export default function Home() {
             <span>memiliki cerita.</span>
           </h2>
         </div>
-
-        <div className="project-grid">
-          <ProjectCard
-            nomor="01"
-            judul="Dravest"
-            deskripsi="Sebuah proyek digital dengan konsep modern yang menggabungkan kreativitas dan teknologi."
-          />
-
-          <ProjectCard
-            nomor="02"
-            judul="Historia"
-            deskripsi="Proyek yang mengangkat cerita dan sejarah dalam bentuk pengalaman digital yang menarik."
-          />
-
-          <ProjectCard
-            nomor="03"
-            judul="Cerita"
-            deskripsi="Ruang untuk menuangkan ide, pengalaman, dan kreativitas ke dalam sebuah karya."
-          />
-        </div>
-
-        <Link href="/porto" className="text-link">
-          Lihat semua proyek →
-        </Link>
       </section>
     </main>
   );

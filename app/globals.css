@@ -1062,3 +1062,74 @@ a {
 .kontak-info p{
     margin-top:8px;
 }
+
+/* ===========================
+   HALAMAN ARTIKEL
+=========================== */
+
+.artikel-page{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 30px;
+}
+
+.artikel-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.artikel-header h1{
+    font-size:44px;
+    margin:15px 0;
+}
+
+.artikel-header p{
+    color:#666;
+    line-height:1.8;
+}
+
+.loading{
+    text-align:center;
+    padding:80px;
+}
+
+.artikel-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.artikel-card{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.artikel-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+}
+
+.artikel-id{
+    display:inline-block;
+    background:#111;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.artikel-card h2{
+    font-size:22px;
+    margin-bottom:15px;
+    text-transform:capitalize;
+}
+
+.artikel-card p{
+    color:#666;
+    line-height:1.8;
+}

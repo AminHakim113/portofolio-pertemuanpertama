@@ -21,9 +21,9 @@ export default function ApiPostPage() {
 
         const data: Post[] = await response.json();
 
-        setPosts(data);
+        setPosts(data.slice(0, 12));
       } catch (error) {
-        console.error("Gagal mengambil data:", error);
+        console.log(error);
       } finally {
         setLoading(false);
       }
@@ -33,42 +33,36 @@ export default function ApiPostPage() {
   }, []);
 
   return (
-    <main
-      style={{
-        maxWidth: "1100px",
-        margin: "40px auto",
-        padding: "20px",
-      }}
-    >
-      <h1>Data Artikel dari API</h1>
+    <main className="artikel-page">
+      <div className="artikel-header">
+        <p className="eyebrow">ARTIKEL</p>
 
-      <p>
-        Halaman ini mengambil data menggunakan <strong>Fetch API</strong> dari
-        JSONPlaceholder kemudian menampilkannya menggunakan{" "}
-        <strong>map()</strong>.
-      </p>
+        <h1>Artikel Teknologi</h1>
+
+        <p>
+          Kumpulan artikel yang diambil secara langsung dari API menggunakan
+          Fetch API pada Next.js.
+        </p>
+      </div>
 
       {loading ? (
-        <p>Memuat data...</p>
+        <div className="loading">
+          <h3>Memuat artikel...</h3>
+        </div>
       ) : (
-        posts.map((artikel) => (
-          <div
-            key={artikel.id}
-            style={{
-              border: "1px solid #ddd",
-              borderRadius: "12px",
-              padding: "20px",
-              marginBottom: "18px",
-              boxShadow: "0 2px 8px rgba(0,0,0,.05)",
-            }}
-          >
-            <h2 style={{ marginBottom: "10px" }}>
-              {artikel.id}. {artikel.title}
-            </h2>
+        <div className="artikel-grid">
+          {posts.map((artikel) => (
+            <article key={artikel.id} className="artikel-card">
+              <span className="artikel-id">
+                Artikel #{artikel.id}
+              </span>
 
-            <p>{artikel.body}</p>
-          </div>
-        ))
+              <h2>{artikel.title}</h2>
+
+              <p>{artikel.body}</p>
+            </article>
+          ))}
+        </div>
       )}
     </main>
   );

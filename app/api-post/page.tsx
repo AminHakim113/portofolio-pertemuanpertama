@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 type Post = {
   id: number;
@@ -21,7 +22,7 @@ export default function ApiPostPage() {
 
         const data: Post[] = await response.json();
 
-        setPosts(data.slice(0, 12));
+        setPosts(data.slice(0, 20));
       } catch (error) {
         console.log(error);
       } finally {
@@ -40,27 +41,38 @@ export default function ApiPostPage() {
         <h1>Artikel Teknologi</h1>
 
         <p>
-          Kumpulan artikel yang diambil secara langsung dari API menggunakan
-          Fetch API pada Next.js.
+          Data diambil menggunakan Fetch API kemudian setiap artikel dapat
+          dibuka menggunakan Dynamic Route Next.js.
         </p>
       </div>
 
       {loading ? (
-        <div className="loading">
-          <h3>Memuat artikel...</h3>
-        </div>
+        <h2 style={{ textAlign: "center" }}>Memuat artikel...</h2>
       ) : (
         <div className="artikel-grid">
           {posts.map((artikel) => (
-            <article key={artikel.id} className="artikel-card">
-              <span className="artikel-id">
-                Artikel #{artikel.id}
-              </span>
+            <Link
+              key={artikel.id}
+              href={`/api-post/${artikel.id}`}
+              className="artikel-link"
+            >
+              <article className="artikel-card">
+                <span className="artikel-id">
+                  Artikel #{artikel.id}
+                </span>
 
-              <h2>{artikel.title}</h2>
+                <h2>{artikel.title}</h2>
 
-              <p>{artikel.body}</p>
-            </article>
+                <p>
+                  {artikel.body.substring(0, 120)}
+                  ...
+                </p>
+
+                <span className="baca-selengkapnya">
+                  Baca Selengkapnya →
+                </span>
+              </article>
+            </Link>
           ))}
         </div>
       )}

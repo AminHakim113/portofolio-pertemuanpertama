@@ -1133,3 +1133,72 @@ a {
     color:#666;
     line-height:1.8;
 }
+
+/* ========================= */
+/* HALAMAN DETAIL ARTIKEL */
+/* ========================= */
+
+.artikel-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.baca-selengkapnya{
+    display:inline-block;
+    margin-top:20px;
+    font-weight:600;
+    color:#2563eb;
+}
+
+.detail-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+    background:#f8fafc;
+}
+
+.detail-card{
+    max-width:850px;
+    width:100%;
+    background:white;
+    padding:45px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.detail-id{
+    display:inline-block;
+    padding:8px 18px;
+    background:#111827;
+    color:white;
+    border-radius:999px;
+    margin-bottom:25px;
+}
+
+.detail-card h1{
+    font-size:38px;
+    margin-bottom:25px;
+    text-transform:capitalize;
+}
+
+.detail-card p{
+    line-height:2;
+    color:#555;
+    margin-bottom:40px;
+}
+
+.kembali-button{
+    display:inline-block;
+    padding:12px 24px;
+    background:#111827;
+    color:white;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.kembali-button:hover{
+    background:#2563eb;
+}
